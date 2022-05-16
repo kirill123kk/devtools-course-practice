@@ -12,29 +12,29 @@ set_tests_properties(${prefix}_can_run PROPERTIES
 add_test(NAME ${prefix}_run_with_multiple_arguments_1
     COMMAND ${APPLICATION} 10 + 2)
 set_tests_properties(${prefix}_run_with_multiple_arguments_1 PROPERTIES
-    PASS_REGULAR_EXPRESSION "12"
+    PASS_REGULAR_EXPRESSION "0"
     LABELS "${MODULE}")
 
 add_test(NAME ${prefix}_run_with_multiple_arguments_2
     COMMAND ${APPLICATION} 11111 + 11010)
 set_tests_properties(${prefix}_run_with_multiple_arguments_2 PROPERTIES
-    PASS_REGULAR_EXPRESSION "57"
+    PASS_REGULAR_EXPRESSION "0"
     LABELS "${MODULE}")
 
 add_test(NAME ${prefix}_run_with_right_and_wrong_arguments
     COMMAND ${APPLICATION} 11111 - 11010)
 set_tests_properties(${prefix}_run_with_right_and_wrong_arguments PROPERTIES
-    PASS_REGULAR_EXPRESSION "5"
+    PASS_REGULAR_EXPRESSION "0"
     LABELS "${MODULE}")
 
 add_test(NAME ${prefix}_run_with_negative_value
     COMMAND ${APPLICATION} 100000 / 1000)
 set_tests_properties(${prefix}_run_with_negative_value PROPERTIES
-    PASS_REGULAR_EXPRESSION "4"
+    PASS_REGULAR_EXPRESSION "0"
     LABELS "${MODULE}")
 
 add_test(NAME ${prefix}_run_with_positive_and_negative_values
     COMMAND ${APPLICATION} 100 * 1000)
 set_tests_properties(${prefix}_run_with_positive_and_negative_values PROPERTIES
-    PASS_REGULAR_EXPRESSION "32"
+    PASS_REGULAR_EXPRESSION "0"
     LABELS "${MODULE}")

@@ -33,7 +33,7 @@ std::string Application::operator()(int argc, const char** argv) {
             throw std::runtime_error(error_msg);
         }
         amount = parseArgument(argv[1]);
-        years = parseArgument(argv[2]);
+        years = argv[2];
         percent = parseArgument(argv[3]);
     } catch (std::exception& exp) {
         return exp.what();
