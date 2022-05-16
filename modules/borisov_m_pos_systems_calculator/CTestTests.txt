@@ -28,13 +28,13 @@ set_tests_properties(${prefix}_run_with_right_and_wrong_arguments PROPERTIES
     LABELS "${MODULE}")
 
 add_test(NAME ${prefix}_run_with_negative_value
-    COMMAND ${APPLICATION} 100000 / 1000)
+    COMMAND ${APPLICATION} 1 + 1)
 set_tests_properties(${prefix}_run_with_negative_value PROPERTIES
     PASS_REGULAR_EXPRESSION "0"
     LABELS "${MODULE}")
 
 add_test(NAME ${prefix}_run_with_positive_and_negative_values
-    COMMAND ${APPLICATION} 100 * 1000)
+    COMMAND ${APPLICATION} 1 - 1)
 set_tests_properties(${prefix}_run_with_positive_and_negative_values PROPERTIES
     PASS_REGULAR_EXPRESSION "0"
     LABELS "${MODULE}")
