@@ -9,7 +9,7 @@
 
 
 #include "include/borisov_m_pos_systems_calculator.h"
-#include "include/systems_calculator_application.h"
+#include "include/cal_app.h"
 
 std::string Application::getHelp(const std::string& appname) {
     return "This is an application to demonstrate"
